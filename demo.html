@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aidni | Dashboard Demo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="app">
+        <nav class="navbar">
+            <div class="logo">Aidni</div>
+            <div class="nav-links">
+                <a href="/index.html">Home</a>
+                <a href="/index.html#features">Features</a>
+                <a href="/docs.html">Docs</a>
+                <a href="/index.html#about">About</a>
+                <a href="#" class="active">Demo</a>
+                <a href="/index.html#contact" class="btn-primary">Get Started</a>
+            </div>
+        </nav>
+
+        <main class="demo-page">
+            <section class="demo-hero">
+                <h1>Experience the Power of <span class="gradient-text">Aidni</span></h1>
+                <p class="hero-subtitle">Comprehensive visibility into your AI infrastructure.</p>
+            </section>
+
+            <section class="dashboard-showcase">
+                <div class="dashboard-frame">
+                    <img src="/dashboard-demo.png" alt="Aidni Dashboard Interface" class="dashboard-img" />
+                    <div class="glow-effect"></div>
+                </div>
+            </section>
+
+            <section class="demo-features">
+                <div class="demo-feature-item">
+                    <h3>System Health at a Glance</h3>
+                    <p>Monitor operational status, data ingest rates, and overall cluster performance in real-time.</p>
+                </div>
+                <div class="demo-feature-item">
+                    <h3>GPU Utilization Tracking</h3>
+                    <p>Optimize your expensive compute resources with detailed usage metrics and historical trends.</p>
+                </div>
+                <div class="demo-feature-item">
+                    <h3>AI Model Latency</h3>
+                    <p>Ensure your models are performing within SLAs with precise inference latency tracking.</p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Aidni Data Inc. All rights reserved.</p>
+        </footer>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>

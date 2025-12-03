@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aidni | Documentation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+</head>
+
+<body>
+    <div id="app">
+        <nav class="navbar">
+            <div class="logo">Aidni <span class="docs-badge">Docs</span></div>
+            <div class="nav-links">
+                <a href="/index.html">Home</a>
+                <a href="/demo.html">Demo</a>
+                <a href="#" class="active">Documentation</a>
+                <a href="https://github.com/aidni/community" target="_blank">Community</a>
+            </div>
+        </nav>
+
+        <div class="docs-container">
+            <aside class="sidebar">
+                <div class="sidebar-group">
+                    <h3>Getting Started</h3>
+                    <ul>
+                        <li><a href="#introduction" class="active">Introduction</a></li>
+                        <li><a href="#installation">Installation</a></li>
+                        <li><a href="#authentication">Authentication</a></li>
+                    </ul>
+                </div>
+                <div class="sidebar-group">
+                    <h3>API Reference</h3>
+                    <ul>
+                        <li><a href="#clusters">Clusters API</a></li>
+                        <li><a href="#pipelines">Pipelines API</a></li>
+                        <li><a href="#models">Models API</a></li>
+                    </ul>
+                </div>
+                <div class="sidebar-group">
+                    <h3>SDKs</h3>
+                    <ul>
+                        <li><a href="#python-sdk">Python SDK</a></li>
+                        <li><a href="#node-sdk">Node.js SDK</a></li>
+                    </ul>
+                </div>
+            </aside>
+
+            <main class="docs-content">
+                <section id="introduction">
+                    <h1>Aidni Documentation</h1>
+                    <p class="lead">Welcome to the Aidni developer hub. Learn how to integrate AI infrastructure
+                        monitoring into your workflows.</p>
+
+                    <div class="info-box">
+                        <p><strong>New:</strong> Aidni v4 API is now generally available! <a href="#">Read the
+                                announcement &rarr;</a></p>
+                    </div>
+                </section>
+
+                <section id="installation">
+                    <h2>Installation</h2>
+                    <p>Install the Aidni CLI to manage your clusters directly from the terminal.</p>
+                    <pre><code class="language-bash">npm install -g @aidni/cli
+# or
+pip install aidni-cli</code></pre>
+                </section>
+
+                <section id="authentication">
+                    <h2>Authentication</h2>
+                    <p>Authenticate your session using your API key found in the dashboard settings.</p>
+                    <pre><code class="language-bash">aidni login --key YOUR_API_KEY</code></pre>
+                </section>
+
+                <hr class="divider">
+
+                <section id="clusters">
+                    <h2>Clusters API</h2>
+                    <p>Manage your compute clusters and monitor their health status.</p>
+
+                    <div class="api-endpoint">
+                        <span class="method get">GET</span>
+                        <span class="url">/v1/clusters/{cluster_id}/health</span>
+                    </div>
+
+                    <p>Returns the real-time health metrics of a specific cluster.</p>
+
+                    <pre><code class="language-json">{
+  "status": "operational",
+  "uptime": "99.99%",
+  "gpu_utilization": 85,
+  "active_nodes": 12
+}</code></pre>
+                </section>
+
+                <section id="python-sdk">
+                    <h2>Python SDK</h2>
+                    <p>Interact with Aidni programmatically using our Python client.</p>
+                    <pre><code class="language-python">from aidni import AidniClient
+
+client = AidniClient(api_key="...")
+
+# Get all active models
+models = client.models.list(status="training")
+
+for model in models:
+    print(f"Model: {model.name}, Loss: {model.current_loss}")</code></pre>
+                </section>
+
+            </main>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 Aidni Data Inc. All rights reserved.</p>
+        </footer>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</body>
+
+</html>
